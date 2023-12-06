@@ -1,0 +1,55 @@
+.error-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 60%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  
+  .modal-header {
+    background: #d9534f;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #d9534f;
+    background: #d9534f;
+    color: white;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+  
+  button:hover,
+  button:active {
+    background: #c9302c;
+    border-color: #c12e2a;
+    color: white;
+  }
+  

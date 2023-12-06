@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './AddUser.css'; // Import the CSS file
 import UserList from './UserList'; // Import the UserList component
-
+//import the Wrapper component
 // Define Card component within AddUser.js
 const Card = (props) => {
   return <div className="card">{props.children}</div>;
