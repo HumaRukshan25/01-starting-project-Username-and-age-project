@@ -11,6 +11,8 @@ const UserList = ({ users }) => {
           <p>Username: {user.username}</p>
           <p>Age: {user.age}</p>
           <p>college name:{user.college}</p>
+          <p>Email:{user.email}</p>
+          <p>password:{user.password}</p>
           <hr />
         </div>
       ))}
