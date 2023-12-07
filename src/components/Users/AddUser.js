@@ -1,8 +1,8 @@
-// AddUser.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './AddUser.css'; // Import the CSS file
 import UserList from './UserList'; // Import the UserList component
-//import the Wrapper component
+// import the Wrapper component if available
+
 // Define Card component within AddUser.js
 const Card = (props) => {
   return <div className="card">{props.children}</div>;
@@ -14,28 +14,40 @@ const AddUser = (props) => {
   const [submittedData, setSubmittedData] = useState([]);
   const [error, setError] = useState(null);
 
+  // Refs for name and age inputs
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
+
   const addUserHandler = (event) => {
     event.preventDefault();
 
+    // Accessing input values using refs
+    const enteredName = nameInputRef.current.value;
+    const enteredAge = ageInputRef.current.value;
+
     // Validation checks
     if (
-      username.trim() === '' ||
-      age.trim() === '' ||
-      isNaN(age) ||
-      !/^[a-zA-Z]+$/.test(username)
+      enteredName.trim() === '' ||
+      enteredAge.trim() === '' ||
+      isNaN(enteredAge) ||
+      !/^[a-zA-Z]+$/.test(enteredName)
     ) {
       setError('Please enter valid data for both fields.');
       return;
     }
 
     // Add your logic for handling user submission here
-    const userData = { username, age };
+    const userData = { username: enteredName, age: enteredAge };
     console.log('User Submitted:', userData);
     setSubmittedData((prevData) => [...prevData, userData]);
     // Reset input fields and error state after submission
     setUsername('');
     setAge('');
     setError(null);
+
+    // Clear input values using refs
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = '';
   };
 
   return (
@@ -49,6 +61,7 @@ const AddUser = (props) => {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          ref={nameInputRef}
         />
 
         <label htmlFor="age">Age (Years)</label>
@@ -57,6 +70,7 @@ const AddUser = (props) => {
           type="number"
           value={age}
           onChange={(e) => setAge(e.target.value)}
+          ref={ageInputRef}
         />
 
         <button type="submit">Add User</button>
