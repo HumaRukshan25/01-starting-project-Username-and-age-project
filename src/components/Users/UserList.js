@@ -10,6 +10,7 @@ const UserList = ({ users }) => {
         <div key={index}>
           <p>Username: {user.username}</p>
           <p>Age: {user.age}</p>
+          <p>college name:{user.college}</p>
           <hr />
         </div>
       ))}
