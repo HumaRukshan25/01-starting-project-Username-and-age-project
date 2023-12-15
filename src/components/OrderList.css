@@ -1,0 +1,54 @@
+/* OrderList.css */
+h1 {
+    padding: 5px;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  /* Style for the form */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the form labels and inputs */
+  input,
+  select {
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 10px;
+    box-sizing: content-box;
+  }
+  
+  /* Style for the "Add to Bill" button */
+  button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the "Add to Bill" button */
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Style for the container of each order */
+  div {
+    border: 3px solid #0d0d0d;
+  }
+  
+  /* Style for the container of grouped orders */
+  .container {
+    margin-bottom: 40px;
+  }
+  
+  

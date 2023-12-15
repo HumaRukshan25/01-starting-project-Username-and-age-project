@@ -1,20 +1,15 @@
-// App.js
 import React from 'react';
-import AddUser from './components/Users/AddUser';
-import Login from './components/Login/Login';
-import Card from './components/UI/Card';
-import ErrorModal from './components/UI/ErrorModal'; // Import the ErrorModal component
-import Wrapper from './components/Helpers/Wrapper'; // Im
-import { UserProvider } from './components/Login/UserContext'
+import OrderList from './components/OrderList';
+import OrderItem from './components/OrderItem';
 function App() {
   return (
-    <UserProvider>
-      <AddUser />
-      <Login />
-    </UserProvider>
+    <div>
+      <h1>Order Management App</h1>
+      <OrderList />
+     
+    </div>
   );
-};
-
-
+}
 
 export default App;
+
