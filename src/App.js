@@ -6,7 +6,6 @@ function App() {
     <div>
       <h1>Order Management App</h1>
       <OrderList />
-     
     </div>
   );
 }
